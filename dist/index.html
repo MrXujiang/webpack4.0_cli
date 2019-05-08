@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>webpack打包多页应用</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+<link href="css/main_7e8f780d247c7db16571.css" rel="stylesheet"></head>
+<body>
+    <div id="root"></div>
+    <script>
+        if ('serviceWorker' in navigator) {  window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js').then(registration => {
+                console.log('SW registered: ', registration);
+            }).catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+                });
+            });
+        }
+    </script>
+<script type="text/javascript" src="js/vender_ad73612f7ffadf4ef5e5.chunk.js"></script><script type="text/javascript" src="js/main_83e26b8be2c7bf00c6d1.js"></script></body>
+</html>
